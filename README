@@ -1,17 +1,78 @@
-May Levy : 207939059
-Shilat Alon : 318287810
+# Supermarket Management System
 
-To run the program run in cmd: java -jar adss2020_v02
+A Java-based supermarket management system developed as part of an academic software engineering course.  
+The system manages products, customers, employees, sales, and reports, and demonstrates layered architecture and object-oriented design.
 
-Some aspects of the software rely on the system clock (the computer's clock).
-You may need to change your system clock time (and date) to dates relative to
-the dummy data in order to check the functionality of said aspects.
+## Features
 
-for more details see instructions.pdf.
+- Product management (add, update, remove products)
+- Customer management
+- Employee and shift management
+- Purchase and receipt handling
+- Reports and statistics on sales and activity
+- Menu-driven console / UI with clear separation between layers
 
-libraries:
-org.apache.maven.plugins maven-compiler-plugin
-org.xerial sqlite-jdbc
-org.junit.jupiter junit-jupiter-api
-org.junit.platform junit-platform-launcher
-org.junit.jupiter junit-jupiter-engine
+## Technologies
+
+- Java  
+- Maven  
+- SQLite (via JDBC)  
+- Layered architecture (presentation, service, domain, data)
+
+## Project Structure
+
+- `dev/src/Controllers` – User interface and controllers  
+- `dev/src/Domain` – Core business entities and logic  
+- `dev/src/Data` – Data access layer  
+- `dev/src/service` – Services connecting UI and domain logic  
+- `TEST` – Tests and helper classes (if applicable)
+
+## How to Run
+
+To run the program, execute in CMD:
+
+```
+java -jar adss2020_v02
+```
+
+Some features rely on the computer’s system clock.  
+You may need to adjust your system date/time to match the dummy data in order to test certain functionalities.
+
+For more information, see `instructions.pdf` (if included).
+
+## Build Instructions
+
+1. Make sure you have **Java 8+** and **Maven** installed.
+2. Clone the repository:
+
+```
+git clone https://github.com/ShilatAlon/supermarket-project.git
+cd supermarket-project
+```
+
+3. Build the project:
+
+```
+mvn clean package
+```
+
+4. Run the generated JAR:
+
+```
+java -jar target/<generated-jar-file>.jar
+```
+
+## Libraries
+
+- org.apache.maven.plugins – maven-compiler-plugin  
+- org.xerial – sqlite-jdbc  
+- org.junit.jupiter – junit-jupiter-api  
+- org.junit.platform – junit-platform-launcher  
+- org.junit.jupiter – junit-jupiter-engine  
+
+## Notes
+
+This repository contains the public, cleaned version of the assignment, without personal identifiers or internal course materials.  
+It is intended for demonstration and educational use.
+
+
